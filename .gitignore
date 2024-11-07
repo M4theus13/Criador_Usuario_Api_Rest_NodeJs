@@ -1,0 +1,10 @@
+node_modules
+# Prisma DB
+prisma/.env
+prisma/db.sqlite
+# Variaveis de ambiente DB
+.env
+.env.*
+# Build
+dist/
+build/
