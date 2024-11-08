@@ -1,10 +1,12 @@
 import express, { response } from 'express' //importa o express
 import { PrismaClient } from '@prisma/client'
+import cors from 'cors' //biblioteca para permitir o frontend acessar o backend
 // precisa no package json colocar o "type" para funcionar a importação do express
 
 const prisma = new PrismaClient()
 const app = express() //passa o express como uma função para uma variavel, para acessar suas funcionalidades
 app.use(express.json()) //faz com que o express passe a usar json
+app.use(cors()) //coloca o link dentro da função cors com o site 
 
 //Criar Usuario
 app.post('/usuarios', async (req, res) => {
