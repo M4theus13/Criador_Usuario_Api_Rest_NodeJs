@@ -10,7 +10,6 @@ app.use(cors()) //coloca o link dentro da função cors com o site
 
 //Criar Usuario
 app.post('/usuarios', async (req, res) => {
-  console.log(req)
 
   await prisma.user.create({ //criar usuario no DB
     data: {
